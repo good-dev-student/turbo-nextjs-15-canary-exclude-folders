@@ -52,3 +52,29 @@ Using pnpm.
 Initializing project with template: app-tw
 
 ---
+
+[x] Without the docs folder works okey!
+
+$ d
+
+> turbo-nextjs-15-canary-exclude-folders@0.1.0 dev /home/xuser/Documents/GitHub/UPPR/turbo-nextjs-15-canary-exclude-folders
+> next dev --turbopack
+
+▲ Next.js 15.2.2 (Turbopack)
+
+- Local: http://localhost:3000
+- Network: http://192.168.1.18:3000
+
+✓ Starting...
+✓ Ready in 987ms
+○ Compiling / ...
+✓ Compiled / in 2.3s
+GET / 200 in 2652ms
+○ Compiling /favicon.ico ...
+✓ Compiled /favicon.ico in 643ms
+GET /favicon.ico?favicon.45db1c09.ico 200 in 704ms
+^C
+
+---
+
+[] adding the .local-docs and try again
