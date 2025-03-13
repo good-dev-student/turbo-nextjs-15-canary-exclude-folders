@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## README
 
-## Getting Started
+[x] add ".docs" folder
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+create latest nextjs project (turbopack) - Run : `npx create-next-app@latest . --use-pnpm`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Issue N°1:
+$ npx create-next-app@latest . --use-pnpm
+Need to install the following packages:
+create-next-app@15.2.2
+Ok to proceed? (y) y
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The directory turbo-nextjs-15-canary-exclude-folders contains files that could conflict:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+.docs/
 
-## Learn More
+Either try using a new directory name, or remove the files listed above.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Rename to .local-docs and run `npx create-next-app@latest . --use-pnpm`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+$ mv .docs/ .local-docs
 
-## Deploy on Vercel
+$ npx create-next-app@latest . --use-pnpm
+The directory turbo-nextjs-15-canary-exclude-folders contains files that could conflict:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+.local-docs/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Either try using a new directory name, or remove the files listed above.
+
+same problem
+
+---
+
+[] move to up level then create latest nextjs project (turbopack) - Run : `npx create-next-app@latest . --use-pnpm`
+
+$ npx create-next-app@latest . --use-pnpm
+✔ Would you like to use TypeScript? … No / Yes
+✔ Would you like to use ESLint? … No / Yes
+✔ Would you like to use Tailwind CSS? … No / Yes
+✔ Would you like your code inside a `src/` directory? … No / Yes
+✔ Would you like to use App Router? (recommended) … No / Yes
+✔ Would you like to use Turbopack for `next dev`? … No / Yes
+✔ Would you like to customize the import alias (`@/*` by default)? … No / Yes
+Creating a new Next.js app in /home/xuser/Documents/GitHub/UPPR/turbo-nextjs-15-canary-exclude-folders.
+
+Using pnpm.
+
+Initializing project with template: app-tw
+
+---
