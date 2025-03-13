@@ -77,4 +77,48 @@ GET /favicon.ico?favicon.45db1c09.ico 200 in 704ms
 
 ---
 
-[] adding the .local-docs and try again
+[x] adding the .local-docs and try again (failed to compile with turbo aka. next dev --turbopack / works without turbo : aka. next dev )
+
+$ mv ../.local-docs/ .
+
+$ d
+
+> turbo-nextjs-15-canary-exclude-folders@0.1.0 dev /home/xuser/Documents/GitHub/UPPR/turbo-nextjs-15-canary-exclude-folders
+> next dev --turbopack
+
+▲ Next.js 15.2.2 (Turbopack)
+
+- Local: http://localhost:3000
+- Network: http://192.168.1.18:3000
+
+✓ Starting...
+✓ Ready in 953ms
+○ Compiling / ...
+✓ Compiled / in 3.4s
+⨯ ./app/globals.css:11661:19
+Parsing css source code failed
+11659 | }
+11660 | .\[\&\>div\.min-h-\[350px\]\]\:p-6 {
+
+> 11661 | &>div.min-h-[350px] {
+
+        |                   ^
+
+11662 | padding: calc(var(--spacing) \* 6);
+11663 | }
+11664 | }
+
+No qualified name in attribute selector: Dimension { has_sign: false, value: 350.0, int_value: Some(350), unit: "px" }. at [project]/app/globals.css:11660:18
+
+○ Compiling /\_error ...
+✓ Compiled /\_error in 1339ms
+GET / 500 in 5221ms
+○ Compiling /favicon.ico ...
+✓ Compiled /favicon.ico in 604ms
+GET /favicon.ico 500 in 766ms
+
+## ==> so the single folder have min-h-[350px is this file ".local-docs/shadcn-ui-docs/components/typography.mdx" so the nextjs is compiling the ".local-docs" !!
+
+---
+
+[] use trurbo to comple and search if there are any config to exclude the ".local-docs" folder
