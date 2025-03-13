@@ -122,3 +122,49 @@ GET /favicon.ico 500 in 766ms
 ---
 
 [] use trurbo to comple and search if there are any config to exclude the ".local-docs" folder
+
+Searching with query : "i have .local-docs folder will make a error when i use trubo pack and run the next dev --turbopack which config to add to nextjs 15 to exclude the folder ?"
+
+---
+
+NOT WORKING:
+
+const nextConfig: NextConfig = {
+turbo: {
+resolveAlias: {
+"./.local-docs/\*": {
+type: "empty",
+},
+},
+},
+};
+
+--
+
+turbo: {
+resolveAlias: {
+'./.local-docs/\*': './mock-empty.js'
+}
+}
+
+--
+
+add the .local-docs folder to the exclude array in your tsconfig.json file:
+{
+"compilerOptions": {
+// your compiler options
+},
+"exclude": [
+"node_modules",
+".local-docs",
+// other folders to exclude
+]
+}
+
+---
+
+rename to .local-docs to local-docs same problem
+
+searching exclude folder in postcss postcss.config.mjs nextjs no result!!
+
+testing with src folder same problem!
